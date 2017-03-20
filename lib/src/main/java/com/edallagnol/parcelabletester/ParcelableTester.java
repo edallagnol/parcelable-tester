@@ -38,11 +38,13 @@ public class ParcelableTester {
 		this.context = context;
 	}
 
+	@SuppressWarnings("WeakerAccess")
 	public void testAllInAppPackage(String pkg) throws Exception {
 		setUp(pkg);
 		runTest();
 	}
 
+	@SuppressWarnings("WeakerAccess")
 	public void testAllInAppPackage() throws Exception {
 		testAllInAppPackage(context.getPackageName());
 	}
@@ -73,7 +75,7 @@ public class ParcelableTester {
 		}
 	}
 
-	public void runTest() throws ParcelableException {
+	private void runTest() throws ParcelableException {
 		for (Class<? extends Parcelable> c : parcelables) {
 			try {
 				testClass(c);
