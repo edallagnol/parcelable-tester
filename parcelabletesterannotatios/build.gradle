@@ -1,0 +1,32 @@
+apply plugin: 'java'
+
+dependencies {
+	compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+sourceCompatibility = "1.6"
+targetCompatibility = "1.6"
+
+apply plugin: 'maven-publish'
+
+group = 'com.edallagnol'
+version = '0.1'
+
+publishing {
+	repositories {
+		maven {
+			url myMavenRepoWriteUrl
+		}
+	}
+
+	publications {
+		jar(MavenPublication) {
+			groupId group
+			artifactId "parcelable-tester-annotations"
+			version project.version
+
+			artifact("$buildDir/libs/${project.name}-${project.version}.jar")
+		}
+
+	}
+}

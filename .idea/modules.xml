@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ParcelableTester.iml" filepath="$PROJECT_DIR$/ParcelableTester.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parcelabletesterannotatios/parcelabletesterannotatios.iml" filepath="$PROJECT_DIR$/parcelabletesterannotatios/parcelabletesterannotatios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-app/test-app.iml" filepath="$PROJECT_DIR$/test-app/test-app.iml" />
+    </modules>
+  </component>
+</project>
