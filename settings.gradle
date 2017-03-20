@@ -1,1 +1,1 @@
-include ':test-app', ':lib', ':parcelabletesterannotatios'
+include ':test-app', ':lib', ':annotations'
