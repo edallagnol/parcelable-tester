@@ -5,6 +5,8 @@ import android.os.Parcelable;
 
 import com.edallagnol.parcelabletester.annotation.SkipParcelableTest;
 
+import java.math.BigDecimal;
+
 public class Entity implements Parcelable{
 	public static boolean fail;
 	private final int finalInt;
@@ -13,6 +15,7 @@ public class Entity implements Parcelable{
 	private double aDouble;
 	private String aString;
 	private Boolean aBoolean;
+	private BigDecimal aBigDecimal;
 	@SkipParcelableTest
 	public long ignore;
 
@@ -37,6 +40,7 @@ public class Entity implements Parcelable{
 		dest.writeDouble(this.aDouble);
 		dest.writeString(this.aString);
 		dest.writeValue(this.aBoolean);
+		dest.writeValue(this.aBigDecimal);
 	}
 
 	protected Entity(Parcel in) {
@@ -48,6 +52,7 @@ public class Entity implements Parcelable{
 		this.aDouble = in.readDouble();
 		this.aString = in.readString();
 		this.aBoolean = (Boolean) in.readValue(Boolean.class.getClassLoader());
+		this.aBigDecimal = (BigDecimal) in.readValue(BigDecimal.class.getClassLoader());
 	}
 
 	public static final Creator<Entity> CREATOR = new Creator<Entity>() {

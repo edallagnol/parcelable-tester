@@ -11,6 +11,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -95,6 +96,7 @@ public class ObjectFiller {
 								args[i] = getValueForClass(paramTypes[i]);
 							}
 							c.setAccessible(true);
+							//noinspection unchecked
 							instance = (T) c.newInstance(args);
 							break;
 						} catch (InstantiationException e) {
@@ -189,6 +191,8 @@ public class ObjectFiller {
 			return UUID.randomUUID().toString();
 		} else if (type.equals(BigInteger.class)) {
 			return BigInteger.valueOf(random.nextInt());
+		} else if (type.equals(BigDecimal.class)) {
+			return BigDecimal.valueOf(random.nextDouble());
 		} else if (type.equals(Date.class)) {
 			return new Date(random.nextLong());
 		} else if (type.equals(Timestamp.class)) {
@@ -236,6 +240,8 @@ public class ObjectFiller {
 			return "4937s";
 		} else if (type.equals(BigInteger.class)) {
 			return new BigInteger("49374937");
+		} else if (type.equals(BigDecimal.class)) {
+			return new BigDecimal("49374937.49374937");
 		} else if (type.equals(Date.class)) {
 			return new Date(4937L);
 		} else if (type.equals(Timestamp.class)) {
@@ -283,6 +289,8 @@ public class ObjectFiller {
 			return "1234s";
 		} else if (type.equals(BigInteger.class)) {
 			return new BigInteger("12341234");
+		} else if (type.equals(BigDecimal.class)) {
+			return new BigDecimal("12341234.12341234");
 		} else if (type.equals(Date.class)) {
 			return new Date(1234L);
 		} else if (type.equals(Timestamp.class)) {
