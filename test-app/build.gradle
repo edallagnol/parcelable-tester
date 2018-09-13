@@ -17,6 +17,10 @@ android {
 			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 		}
 	}
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -27,4 +31,5 @@ dependencies {
 	implementation 'com.android.support:appcompat-v7:25.2.0'
 	testImplementation 'junit:junit:4.12'
 	implementation project(':lib')
+    implementation project(':annotations')
 }
