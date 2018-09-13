@@ -1,6 +1,5 @@
 package com.edallagnol.parcelabletester.utils;
 
-import android.graphics.Bitmap;
 import android.os.Parcel;
 import android.util.Log;
 
@@ -201,10 +200,6 @@ public class ObjectFiller {
 		} else if (type.equals(ArrayList.class) || type.equals(List.class)) {
 			// #TODO create elements
 			return new ArrayList<>();
-		} else if (type.equals(Bitmap.class)) {
-			//#TODO
-			return null;
-		//	return Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888);
 		} else if (type.isArray()) {
 			Class<?> componentType = type.getComponentType();
 			Object o = Array.newInstance(componentType, 1);
@@ -252,9 +247,6 @@ public class ObjectFiller {
 		} else if (type.equals(ArrayList.class) || type.equals(List.class)) {
 			// #TODO create elements
 			return new ArrayList<>();
-		} else if (type.equals(Bitmap.class)) {
-			// #TODO
-			return null;
 		} else if (type.isArray()) {
 			Class<?> componentType = type.getComponentType();
 			Object o = Array.newInstance(componentType, 1);
@@ -302,9 +294,6 @@ public class ObjectFiller {
 		} else if (type.equals(ArrayList.class) || type.equals(List.class)) {
 			// #TODO create elements
 			return new ArrayList<>();
-		} else if (type.equals(Bitmap.class)) {
-			// #TODO
-			return null;
 		} else if (type.isArray()) {
 			Class<?> componentType = type.getComponentType();
 			Object o = Array.newInstance(componentType, 1);
