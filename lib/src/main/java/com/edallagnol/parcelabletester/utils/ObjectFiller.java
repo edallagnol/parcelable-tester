@@ -189,6 +189,8 @@ public class ObjectFiller {
 			return (char)(random.nextInt(25) + 'a');
 		} else if (type.equals(String.class)) {
 			return UUID.randomUUID().toString();
+		} else if (type.equals(UUID.class)) {
+			return UUID.randomUUID();
 		} else if (type.equals(BigInteger.class)) {
 			return BigInteger.valueOf(random.nextInt());
 		} else if (type.equals(BigDecimal.class)) {
@@ -238,6 +240,8 @@ public class ObjectFiller {
 			return 'a';
 		} else if (type.equals(String.class)) {
 			return "4937s";
+		} else if (type.equals(UUID.class)) {
+			return new UUID(4937L, 4937L * 4937L);
 		} else if (type.equals(BigInteger.class)) {
 			return new BigInteger("49374937");
 		} else if (type.equals(BigDecimal.class)) {
@@ -287,6 +291,8 @@ public class ObjectFiller {
 			return 'b';
 		} else if (type.equals(String.class)) {
 			return "1234s";
+		} else if (type.equals(UUID.class)) {
+			return new UUID(1234L, 1234L * 1234L);
 		} else if (type.equals(BigInteger.class)) {
 			return new BigInteger("12341234");
 		} else if (type.equals(BigDecimal.class)) {
