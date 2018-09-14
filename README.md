@@ -42,6 +42,6 @@ Module build.gradle:
 dependencies {
 	implementation 'com.edallagnol:parcelable-tester-annotations:0.4'
 	...
-	androidTestCompile group: 'com.edallagnol', name: 'parcelable-tester', version: '0.4'
+	androidTestImplementation 'com.edallagnol:parcelable-tester:0.4'
 }
 </pre>
