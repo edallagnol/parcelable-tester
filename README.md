@@ -41,6 +41,6 @@ Module build.gradle:
 <pre>
 dependencies {
 	...
-	androidTestCompile group: 'com.edallagnol', name: 'parcelable-tester', version: '0.2'
+	androidTestCompile group: 'com.edallagnol', name: 'parcelable-tester', version: '0.4'
 }
 </pre>
